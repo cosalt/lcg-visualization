@@ -2,6 +2,12 @@
 
 Ever wondered how random number generators actually work? This project visualizes one of the oldest and simplest methods: the Linear Congruential Generator.
 
+## 🌐 Try It Online!
+
+**[Launch Web App →](https://lcg-visualization.streamlit.app)** *(Coming soon after deployment)*
+
+Interactive web version with adjustable parameters - no installation needed!
+
 ## What's This About?
 
 A Linear Congruential Generator is a classic algorithm for creating sequences of pseudo-random numbers. It's not truly random (nothing in computers really is), but it's fast and good enough for many applications. The formula is surprisingly simple:
@@ -32,6 +38,10 @@ This plots each number against its successor. The red squares show the sequence 
 
 ## How to Run It
 
+### Web Version (Recommended)
+The easiest way is to use the interactive web app - see deployment instructions in [DEPLOYMENT.md](DEPLOYMENT.md).
+
+### Desktop Version
 Make sure you have the required libraries:
 
 ```bash
@@ -45,6 +55,14 @@ python "Linear Congruential Generator (LCG).py"
 ```
 
 The animation will loop continuously, showing you how each number in the sequence is generated.
+
+### Streamlit Web App (Local)
+To run the interactive web version locally:
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ## Play Around With It
 
