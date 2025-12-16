@@ -14,7 +14,7 @@ st.markdown("""
 A **Linear Congruential Generator** is one of the oldest and simplest pseudo-random number generators. 
 It produces a sequence of numbers using a simple mathematical formula:
 
-$$X_{n+1} = (a \\times X_n + c) \\mod m$$
+$$X_{n+1} = (a \\times X_n + c) \\bmod m$$
 
 Where:
 - **m** = modulus (defines the range, 0 to m-1)
@@ -174,7 +174,7 @@ if show_animation:
         ax4.get_yaxis().set_visible(False)
         ax4.axhline(0, color='gray', linestyle='--', alpha=0.3)
         ax4.barh(0, next_val, height=0.3, color='purple', alpha=0.7)
-        ax4.set_title(f"Step 4: Modulo {m} → ${val_before} \\mod {m} = {next_val}$", fontsize=10)
+        ax4.set_title(f"Step 4: Modulo {m} → ${val_before} \\% {m} = {next_val}$", fontsize=10)
         ax4.spines['top'].set_visible(False)
         ax4.spines['right'].set_visible(False)
         ax4.spines['left'].set_visible(False)
@@ -222,7 +222,7 @@ else:
             ax_final.get_yaxis().set_visible(False)
             ax_final.axhline(0, color='gray', linestyle='--', alpha=0.3)
             ax_final.barh(0, next_val, height=0.3, color='purple', alpha=0.7)
-            ax_final.set_title(f"Last Calculation: ${val_before} \\mod {m} = {next_val}$", fontsize=10)
+            ax_final.set_title(f"Last Calculation: ${val_before} \\% {m} = {next_val}$", fontsize=10)
             ax_final.spines['top'].set_visible(False)
             ax_final.spines['right'].set_visible(False)
             ax_final.spines['left'].set_visible(False)
