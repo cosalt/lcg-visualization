@@ -2,71 +2,71 @@
 
 Ever wondered how random number generators actually work? This project visualizes one of the oldest and simplest methods: the Linear Congruential Generator.
 
-## 🌐 Try It Online!
+## try it online!
 
-**[Launch Web App →](https://lcg-visualization.streamlit.app)** *(Coming soon after deployment)*
+**[Launch Web App](https://lcg-visualization.streamlit.app)**
 
 Interactive web version with adjustable parameters - no installation needed!
 
-## What's This About?
+## wat dis?
 
 A Linear Congruential Generator is a classic algorithm for creating sequences of pseudo-random numbers. It's not truly random (nothing in computers really is), but it's fast and good enough for many applications. The formula is surprisingly simple:
 
 **X<sub>n+1</sub> = (a × X<sub>n</sub> + c) mod m**
 
-Where:
+where:
 - **m** is the modulus (the "box" size - 16 in this demo)
 - **a** is the multiplier (5)
 - **c** is the increment (3)
 - **seed** is where we start (1)
 
-This visualization uses small numbers so you can actually see what's happening. Real-world implementations use much larger values.
+this visualization uses small numbers so you can actually see what's happening. real-world implementations use much larger values.
 
 ## What You'll See
 
-The animation shows two views side-by-side:
+the animation shows two views side-by-side:
 
-### Left: The Math in Action (1D View)
+### left: The Math in Action (1D View)
 Watch each step of the formula unfold:
 1. **Blue** - Start with the current number
 2. **Orange** - Multiply it by 5
 3. **Green** - Add 3
 4. **Purple** - Take modulo 16 (the "wrap around" that keeps numbers in range)
 
-### Right: The Pattern (2D View)
+### right: The Pattern (2D View)
 This plots each number against its successor. The red squares show the sequence pattern - this is similar to what's called a "spectral test" in random number generation. Good random generators should fill this space uniformly without obvious patterns.
 
-## How to Run It
+## run how
 
-### Web Version (Recommended)
-The easiest way is to use the interactive web app - see deployment instructions in [DEPLOYMENT.md](DEPLOYMENT.md).
+### web version (recommended)
+the easiest way is to use the interactive web app - see deployment instructions in [DEPLOYMENT.md](DEPLOYMENT.md).
 
-### Desktop Version
+### desktop version
 Make sure you have the required libraries:
 
 ```bash
 pip install matplotlib numpy
 ```
 
-Then just run:
+then run!!:
 
 ```bash
 python "Linear Congruential Generator (LCG).py"
 ```
 
-The animation will loop continuously, showing you how each number in the sequence is generated.
+the animation will loop continuously, showing you how each number in the sequence is generated.
 
-### Streamlit Web App (Local)
-To run the interactive web version locally:
+### streamlit web appp (local)
+to run the interactive web version locally:
 
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Play Around With It
+## mess around with it
 
-Want to see how different parameters affect the pattern? Try changing these values at the top of the file:
+want to see how different parameters affect the pattern? Try changing these values at the top of the file:
 
 ```python
 m = 16   # modulus
@@ -75,16 +75,16 @@ c = 3    # increment
 seed = 1 # starting number
 ```
 
-Some combinations will give you better "random" patterns than others. That's the art and science of choosing good LCG parameters!
+some combinations will give you better "random" patterns than others. that's the art and science of choosing good LCG parameters!
 
-## Why This Matters
+## why this matters and why i did it
 
 LCGs are everywhere - from video games to Monte Carlo simulations. While modern cryptography uses more sophisticated methods, understanding LCGs gives you insight into:
-- How computers generate randomness
-- Why some "random" sequences have patterns
-- The basics of pseudo-random number generation
+- how computers generate randomness
+- why some "random" sequences have patterns
+- the basics of pseudo-random number generation
 
-Plus, it's just satisfying to watch math in motion.
++ it's cool, to watch math in motion
 
 ## Technical Bits
 
