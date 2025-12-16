@@ -14,7 +14,7 @@ st.markdown("""
 A **Linear Congruential Generator** is one of the oldest and simplest pseudo-random number generators. 
 It produces a sequence of numbers using a simple mathematical formula:
 
-$$X_{n+1} = (a \\times X_n + c) \\bmod m$$
+$$X_{n+1} = (a \\times X_n + c) \\\\bmod m$$
 
 Where:
 - **m** = modulus (defines the range, 0 to m-1)
