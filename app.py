@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 
-st.set_page_config(page_title="LCG Visualization", page_icon="🔢", layout="wide")
+st.set_page_config(page_title="LCG Visualization", layout="wide")
 
 # Title and explanation
-st.title("🔢 Linear Congruential Generator Visualization")
+st.title("Linear Congruential Generator Visualization")
 
 st.markdown("""
 ### What is an LCG?
@@ -29,7 +29,7 @@ The quality of randomness depends heavily on choosing good parameters.
 st.divider()
 
 # Sidebar controls
-st.sidebar.header("🎛️ LCG Parameters")
+st.sidebar.header("LCG Parameters")
 st.sidebar.markdown("Adjust these values to see how they affect the generator:")
 
 m = st.sidebar.slider("Modulus (m)", min_value=8, max_value=64, value=16, step=4,
@@ -44,7 +44,7 @@ seed = st.sidebar.slider("Seed", min_value=0, max_value=m-1, value=1,
 st.sidebar.divider()
 
 # Animation controls
-st.sidebar.header("⚙️ Visualization Settings")
+st.sidebar.header("Visualization Settings")
 show_animation = st.sidebar.checkbox("Show Step-by-Step Animation", value=True,
                                      help="Animate each calculation step")
 animation_speed = st.sidebar.slider("Animation Speed", min_value=0.1, max_value=2.0, 
@@ -52,7 +52,7 @@ animation_speed = st.sidebar.slider("Animation Speed", min_value=0.1, max_value=
                                    help="Seconds per step")
 
 st.sidebar.divider()
-st.sidebar.markdown("### 💡 Tips")
+st.sidebar.markdown("### Tips")
 st.sidebar.markdown("""
 - Try different **modulus** values to see larger/smaller sequences
 - **Good LCG parameters** create patterns that fill the 2D plot uniformly
@@ -96,7 +96,7 @@ st.divider()
 
 # Create two columns for the visualization
 if show_animation:
-    st.subheader("🎬 Step-by-Step Calculation")
+    st.subheader("Step-by-Step Calculation")
     
     # Create placeholder for animation
     viz_col1, viz_col2 = st.columns(2)
@@ -203,7 +203,7 @@ if show_animation:
 
 else:
     # Static visualization (both plots side by side)
-    st.subheader("📊 Complete Sequence Visualization")
+    st.subheader("Complete Sequence Visualization")
     
     col1, col2 = st.columns(2)
     
@@ -252,7 +252,7 @@ else:
 st.divider()
 
 # Additional insights
-st.subheader("📈 Analysis")
+st.subheader("Analysis")
 
 col1, col2 = st.columns(2)
 
@@ -270,7 +270,7 @@ with col1:
     
     # Check for obvious patterns
     if len(sequence) < m // 2:
-        st.warning("⚠️ Short cycle detected - poor parameter choice")
+        st.warning("Short cycle detected - poor parameter choice")
 
 with col2:
     st.markdown("#### Parameter Quality")
@@ -304,7 +304,7 @@ st.divider()
 # Footer
 st.markdown("""
 ---
-### 🧮 About LCGs
+### About LCGs
 
 LCGs were first proposed by Lehmer in 1949 and have been extensively studied. While simple and fast, 
 they have known limitations:
